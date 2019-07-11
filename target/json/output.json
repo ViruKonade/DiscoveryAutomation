@@ -1,0 +1,150 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: Virendra"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business rule through list of steps with arguments."
+      },
+      {
+        "line": 5,
+        "value": "#Given: Some precondition step"
+      },
+      {
+        "line": 6,
+        "value": "#When: Some key actions"
+      },
+      {
+        "line": 7,
+        "value": "#Then: To observe outcomes or validation"
+      },
+      {
+        "line": 8,
+        "value": "#And,But: To enumerate more Given,When,Then steps"
+      },
+      {
+        "line": 9,
+        "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
+      },
+      {
+        "line": 10,
+        "value": "#Examples: Container for s table"
+      },
+      {
+        "line": 11,
+        "value": "#Background: List of steps run before each of the scenarios"
+      },
+      {
+        "line": 12,
+        "value": "##"
+      }
+    ],
+    "line": 13,
+    "elements": [
+      {
+        "line": 17,
+        "name": "User is able to validate video title and description",
+        "description": "",
+        "id": "video-validation-for-discovery.com;user-is-able-to-validate-video-title-and-description",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17539427100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User navigate to Discovery home page",
+            "match": {
+              "location": "DiscoveryPage.user_navigate_to_Discovery_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 53276300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Scroll to Recommened For You section",
+            "match": {
+              "location": "DiscoveryPage.scroll_to_Recommened_For_You_section()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1193957200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Hover on video and Click on Add to Favorites plus Button",
+            "match": {
+              "location": "DiscoveryPage.hover_on_video_and_Click_on_Add_to_Favorites_plus_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3994018300,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User navigate to my-videos page",
+            "match": {
+              "location": "DiscoveryPage.user_navigate_to_my_videos_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73982000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Search for Favorite Shows title",
+            "match": {
+              "location": "DiscoveryPage.search_for_Favorite_Shows_title()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1323247600,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Validate videos appear with the correct show title and description",
+            "match": {
+              "location": "DiscoveryPage.validate_videos_appear_with_the_correct_show_title_and_description()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@videovalidation"
+          }
+        ]
+      }
+    ],
+    "name": "Video Validation for Discovery.com",
+    "description": "Description: Addition of recommended videos to favorites list and its validation",
+    "id": "video-validation-for-discovery.com",
+    "keyword": "Feature",
+    "uri": "resources/featurefile/End2EndTest.feature"
+  }
+]
