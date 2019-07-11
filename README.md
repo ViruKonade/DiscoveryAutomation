@@ -1,10 +1,10 @@
 # Author : Virendra
 
-1) ConfigFileReader contains all the basic method
+1) ConfigFileReader contains all the basic utility method
 2) WebDriverManager: If we want execute on different browser this class have required stuffs
 	-- for now i have created only for chrome browser 
-3) DiscoveryHomePageObjects : Contains all the objects and methods releated Homepage and Myvideos page
-4) DiscoveryHomePage: Step defination are defined
+3) DiscoveryObjects : Contains all the objects and methods releated Homepage and Myvideos page
+4) DiscoveryPage: Step defination are defined
 5) TestRunner : This is triggering point for your test
 
 #Procedure to run 
