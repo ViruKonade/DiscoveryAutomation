@@ -11,4 +11,5 @@
 1) Open Eclispe
 2) Import project as maven
 3) Go to src/test/java/testsuite -> TestRunner and Run as JUnit test
-4) Extent Report is created under target -> report.html
+
+## --Extent Report is created under target -> report.html
