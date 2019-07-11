@@ -7,16 +7,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 import com.discovery.automation.Enum.DriverType;
-//import com.discovery.automation.Enum.EnvironmentType;
-
 
 
 
 public class ConfigFileReader {
 	private Properties properties;
 	private final String propertyFilePath= "ConfigFile.properties";
- 
-	
+
+
 	public ConfigFileReader(){
 		BufferedReader reader;
 		try {
@@ -33,20 +31,20 @@ public class ConfigFileReader {
 			throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
 		}		
 	}
-	
+
 	public String getDriverPath(){
 		String driverPath = properties.getProperty("driverPath");
 		if(driverPath!= null) return driverPath;
 		else throw new RuntimeException("driverPath not specified in the Configuration.properties file.");		
 	}
-	
-	
+
+
 	public String getApplicationUrl(String para) {
 		String url = properties.getProperty(para);
 		if(url != null) return url;
 		else throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
-	
+
 	public DriverType getBrowser() {
 		String browserName = properties.getProperty("browser");
 		if(browserName == null || browserName.equals("chrome")) return DriverType.CHROME;
@@ -55,19 +53,19 @@ public class ConfigFileReader {
 
 		else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
 	}
- 
-	 
+
+
 	public Boolean getBrowserWindowSize() {
 		String windowSize = properties.getProperty("windowMaximize");
 		if(windowSize != null) return Boolean.valueOf(windowSize);
 		return true;
 	}
-	
+
 	public String getReportConfigPath(){
 		String reportConfigPath = properties.getProperty("reportConfigPath");
 		if(reportConfigPath!= null) return reportConfigPath;
 		else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
 	}
-	
+
 
 }
