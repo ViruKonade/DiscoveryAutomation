@@ -9,7 +9,7 @@
 
 #Procedure to run 
 1) Open Eclispe
-2) Import project as maven
+2) Import an existing maven project
 3) Go to src/test/java/testsuite -> TestRunner and Run as JUnit test
 
 ## --Extent Report is created under target -> report.html
