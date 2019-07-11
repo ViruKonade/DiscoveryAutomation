@@ -22,17 +22,19 @@ public class WebDriverManager {
 		//environmentType = configfileReader.getEnvironment();
 	}
 
+	//get the driver - creates a new one if its null
 	public WebDriver getDriver() {
 		if(driver == null) driver = createDriver();
 		return driver;
 	}
 
+	//Craete Driver
 	private WebDriver createDriver() {
 		driver = createLocalDriver();
 		return driver;
 	}
 
-
+	//For multiple browser
 	private WebDriver createLocalDriver() {
 		switch (driverType) {	    
 		case FIREFOX : 
@@ -53,6 +55,7 @@ public class WebDriverManager {
 		return driver;
 	}	
 
+	//Quit the browser
 	public void closeDriver() {
 		driver.close();
 		driver.quit();

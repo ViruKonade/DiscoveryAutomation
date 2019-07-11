@@ -14,7 +14,7 @@ public class ConfigFileReader {
 	private Properties properties;
 	private final String propertyFilePath= "ConfigFile.properties";
 
-
+	//Loadind configurations data
 	public ConfigFileReader(){
 		BufferedReader reader;
 		try {
@@ -32,6 +32,8 @@ public class ConfigFileReader {
 		}		
 	}
 
+	
+	//Method to get Driverpath
 	public String getDriverPath(){
 		String driverPath = properties.getProperty("driverPath");
 		if(driverPath!= null) return driverPath;
@@ -39,12 +41,20 @@ public class ConfigFileReader {
 	}
 
 
+	/*
+	 * Method to get application url
+	 * parameter: para- which url u want (homepage or my videos page)
+	 * */
 	public String getApplicationUrl(String para) {
 		String url = properties.getProperty(para);
 		if(url != null) return url;
 		else throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
 
+	/*Method to get browserdriver
+	 * method can be parameterized (chrome,firefox,ie)
+	 * implemented only for chorme
+	 * */ 
 	public DriverType getBrowser() {
 		String browserName = properties.getProperty("browser");
 		if(browserName == null || browserName.equals("chrome")) return DriverType.CHROME;
@@ -55,12 +65,14 @@ public class ConfigFileReader {
 	}
 
 
+	//maximize the window on the basus of flag windowsiz
 	public Boolean getBrowserWindowSize() {
 		String windowSize = properties.getProperty("windowMaximize");
 		if(windowSize != null) return Boolean.valueOf(windowSize);
 		return true;
 	}
 
+	//Getting report config path
 	public String getReportConfigPath(){
 		String reportConfigPath = properties.getProperty("reportConfigPath");
 		if(reportConfigPath!= null) return reportConfigPath;

@@ -1,3 +1,6 @@
+/*This class is having all the page elements and related methods
+ * present on pages
+ * */
 package com.discovery.automation.pageobjects;
 
 
