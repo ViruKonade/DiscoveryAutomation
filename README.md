@@ -9,6 +9,6 @@
 
 #Procedure to run 
 1) Open Eclispe
-2) Import project as mevan
-3) Go to TestRunner and Run as JUnit test
+2) Import project as maven
+3) Go to TestRunner and Run as JUnit test - 
 
